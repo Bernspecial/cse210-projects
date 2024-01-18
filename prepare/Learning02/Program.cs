@@ -2,6 +2,7 @@ using System;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml.XPath;
 
+// This is where i add values to the classes, meaning this is where i simplify everything without facing or going through any complicated objects
 class Program
 {
     static void Main(string[] args)
