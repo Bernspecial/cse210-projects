@@ -28,18 +28,27 @@ class Program
 
         int guessCount = 0;
 
-        Console.Write("What is the magic number? ");
-        string userMagicNumber = Console.ReadLine();
-        int magicNumber = int.Parse(userMagicNumber);
+        // Console.Write("What is the magic number? ");
+        // string userMagicNumber = Console.ReadLine();
+        // int magicNumber = int.Parse(userMagicNumber);
 
-        Console.Write("What is your guess? ");
-        string userGuessNumber = Console.ReadLine();
-        int guessNumber = int.Parse(userGuessNumber);
+        // Console.Write("What is your guess? ");
+        // string userGuessNumber = Console.ReadLine();
+        // int guessNumber = int.Parse(userGuessNumber);
+
+        Random randomNumber = new Random();
+        int magicNumber = randomNumber.Next(1, 1000000);
+
+        int guessNumber = -1;
 
 
         while (magicNumber != guessNumber)
         {
-
+            Console.Write("What is your guess? ");
+            string userGuessNumber = Console.ReadLine();
+            guessNumber = int.Parse(userGuessNumber);
+            guessCount++;
+            
             if (magicNumber > guessNumber)
             {
                 Console.WriteLine("Higher");
@@ -49,10 +58,7 @@ class Program
                 Console.WriteLine("Lower");
             }
             
-            Console.Write("What is your guess? ");
-            userGuessNumber = Console.ReadLine();
-            guessNumber = int.Parse(userGuessNumber);
-            guessCount++;
+            
         }
         Console.WriteLine($"You Guessed it! you guessed it {guessCount} times");
 
