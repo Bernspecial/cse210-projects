@@ -283,7 +283,7 @@ public class GoalManager
                         _goals.Add(eternalGoal);
                         break;
 
-                    case "ChecklistGoal":
+                    case "CheckListGoal":
                         CheckListGoal checklistGoal = new CheckListGoal(parts[1], parts[2], int.Parse(parts[3]), int.Parse(parts[4]), int.Parse(parts[5]), int.Parse(parts[6]));
                         _goals.Add(checklistGoal);
                         break;
