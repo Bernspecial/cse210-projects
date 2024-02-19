@@ -44,6 +44,6 @@ public class NoteEntry : Transaction
     public override void Display()
     {
         // Write a formatted string to the console that includes the date, description, and amount of the note entry
-        Console.WriteLine($"NoteSave {GetDate().ToShortDateString()} {GetDescription()}  ${GetAmount()}");
+        Console.WriteLine($"NoteEntry {GetDate().ToShortDateString()} {GetDescription()}  ${GetAmount()}");
     }
 }

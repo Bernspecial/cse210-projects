@@ -122,7 +122,9 @@ public class FinanceManager
         Console.WriteLine();
         Console.WriteLine("What would you like to note down?");
         string entryText = Console.ReadLine();
-        NoteEntry noteEntry = new NoteEntry(DateTime.Now, prompt, 9, prompt, entryText);
+        Console.WriteLine("What amount did you input in your transaction? ");
+        decimal amount = decimal.Parse(Console.ReadLine());
+        NoteEntry noteEntry = new NoteEntry(DateTime.Now, prompt, amount, prompt, entryText);
         _transactions.Add(noteEntry);
     }
 
@@ -235,7 +237,7 @@ public void LoadFromFile()
 
                 _transactions.Add(transaction);
 
-                reader.ReadLine(); // Read and discard empty line
+                reader.ReadLine(); 
             }
         }
 
